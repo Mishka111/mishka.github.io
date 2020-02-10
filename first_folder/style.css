@@ -20,7 +20,7 @@
     flex-wrap: wrap;
     margin: 0 0 2.5rem 0;
     justify-content:space-between;
-}
+} 
 
 .box {
     background: hsl(0, 0%, 100%,100%);
