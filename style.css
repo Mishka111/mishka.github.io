@@ -5,10 +5,12 @@ body {
 
 li {
     list-style-type: none;
-    margin: 30px 0;
+    margin: 50px 0;
 }
 a {
+    padding: 10px;
     font-size: 50px;
+    border: 2px solid white;
     color: white;
     text-decoration: none;
 }
