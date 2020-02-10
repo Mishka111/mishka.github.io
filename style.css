@@ -1,7 +1,14 @@
 body {
     background-color: orangered;
+    font-family: sans-serif;
 }
 
-h1 {
+li {
+    list-style-type: none;
+    margin: 30px 0;
+}
+a {
+    font-size: 50px;
     color: white;
+    text-decoration: none;
 }
