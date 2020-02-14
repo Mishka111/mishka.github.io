@@ -1,16 +1,36 @@
 body {
-    background-color: orangered;
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
+    background-color: rgb(145,130,255);
 }
 
-li {
-    list-style-type: none;
-    margin: 50px 0;
+.container {
+    width: 100%;
+    margin: 50px auto;
 }
-a {
-    padding: 10px;
-    font-size: 50px;
-    border: 2px solid white;
-    color: white;
+.row {
+    display: flex;
+}
+.col {
+    width: 25%;
+    margin: 0 10px;
+    padding: 20px 0px;
+    text-align: center;
+    background-color: rgb(33,187,243);
+}
+.col a {
+    color: rgb(255,255,255);
     text-decoration: none;
 }
+
+@media (max-width: 500px) {
+    .row {
+        flex-direction: column;
+    }
+    .col {
+        margin: 10px auto;
+        width: 40%;
+        text-align: center;
+    }
+  }
