@@ -11,6 +11,8 @@ body {
 }
 .row {
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .col {
     width: 25%;
