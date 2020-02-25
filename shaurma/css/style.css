@@ -1,6 +1,7 @@
 .header-wrapper {
-    background-color: hsl(350, 100%, 74%);
-    background-image: url('img');
+    background-image:
+    radial-gradient(circle, hsla(350, 100%, 74%, 80%), hsla(350, 100%, 74%, 80%)),
+    url('../img/pattern.png');
     padding: 80px 0;
 }
 
@@ -47,7 +48,9 @@
 /* ? main */
 
 .main-wrapper {
-    background-color: hsl(350, 100%, 70%);
+    background-image:
+    radial-gradient(circle, hsla(350, 100%, 70%, 90%), hsla(350, 100%, 70%, 90%)),
+    url('../img/main-background.png');
     padding: 100px 0;
 }
 
@@ -55,7 +58,7 @@
     color: #fff;
     background-color: hsl(350, 82%, 47%);
     border-radius: 20px;
-    width: 30%;
+    max-width: 30%;
     padding: 30px;
 }
 
@@ -76,9 +79,9 @@
 }
 
 .main-button {
-    text-align: center;
     color: #000;
     background-color: hsl(36, 91%, 58%);
+    text-align: center;
     border-radius: 5px;
     padding: 20px;
     width: 50%;
@@ -89,9 +92,6 @@
 }
 
 /* ? main link */
-    .main-link {
-
-    }
 
     .main-title {
         text-align: center;
@@ -102,25 +102,27 @@
     .main-row {
         display: flex;
         justify-content: space-evenly;
-        margin: 100px 0;
+        margin: 100px 0 0;
+        width: 100%;
+        flex-wrap: wrap;
+        line-height: 200px;
+        /* -webkit-user-select: none; /* Safari */
+        /* -ms-user-select: none; IE 10+ and Edge */
+        /* user-select: none; Standard syntax */
     }
 
-    .main-col-1, .main-col-2 {
+    .main-col-1 {
         width: 30%;
+        /* position: relative;
+        z-index: -1; */
     }
-    /* .main-col-2 {
-        width: 30%;
-    } */
 
     .main-box {
+        border: 1px solid #fff;
         width: 350px;
         height: 350px;
         border-radius: 100%;
-        filter: grayscale(100%);
-        transition: filter 1s;
-    }
-    .main-box:hover {
-        filter: grayscale(0);
+        transition: all 1s;
     }
     
     .main-box {
@@ -130,18 +132,13 @@
         text-align: center;
         margin-bottom: 60px;
     }
-    .shaurma {
-        display: block;
-    }
-
-    .shaurma::after {
-
-    }
 
 /* ? footer */
 
 .footer-wrapper {
-    background-color: hsl(350, 100%, 74%);
+    background-image:
+    radial-gradient(circle, hsla(350, 100%, 74%, 80%), hsla(350, 100%, 74%, 80%)),
+    url('../img/pattern.png');
     padding: 60px;
 }
 
@@ -170,13 +167,6 @@
         max-width: 800px;
     }
     .main {
-        width: 40%;
-    }
-    .main-row {
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-    }
-    .main-col-1, .main-col-2 {
         width: 50%;
     }
   }
@@ -188,19 +178,6 @@
       .header-link {
           font-size: 60px;
       }
-      .main-col-1, .main-col-2 {
-        width: 40%;
-    }
-  }
-
-  @media(max-width: 700px) {
-    .main-col-1, .main-col-2 {
-        width: 51%;
-    }
-    .main-box {
-        width:300px;
-        height: 300px;
-    }
   }
 
   @media(max-width: 425px) {
