@@ -1,0 +1,99 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+    width: 100%;
+    display: block;
+}
+a {
+    text-decoration: none;
+}
+
+.linear-hr {
+    margin: 3rem auto;
+    width: 60%;
+    height: 1.5px;
+    background-image: linear-gradient(90deg, #a480ff, #ff8f83);
+}
+.hr-line {
+    margin-bottom: 3em;
+    height: 0.5px;
+    background-color: #dde1eb;
+}
+
+.button {
+    padding: 0.9rem 2rem;
+    height: 3rem;
+    border-radius: 3rem;
+    transition: 0.3s;
+}
+.btn-1 {
+    color: #fff;
+    border: 2.5px solid #fff;
+}
+.btn-1:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.btn-2 {
+    color: #7a7d86;
+    border: 2.5px solid #dde1eb;
+}
+.btn-2:hover {
+    color: #e59dc4;
+    border: 2.5px solid #e59dc4;
+    background-color: rgba(229, 157, 196, 0.1);
+}
+
+.icon-1 {
+    color: #c09cd3;
+}
+.icon-2 {
+    color: #e59dc4;
+}
+.icon-3 {
+    color: #ff8f83;
+}
+.icon-4 {
+    color: #a480ff;
+}

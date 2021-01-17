@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- ? bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <!-- ? style css -->
+        <style>
+            .cardColor {background-color: gainsboro;}
+            .hideButton {display: none;}
+            .hideButtonDanger {display: none;}
+            .hideButtonEdit {display: none;}
+        </style>
+</head>
+<body class="bg-light">
+
+    <!-- ? header buttons start -->
+    <div class="wrapper pt-3">
+        <button type="button" class="ml-5 mr-5 btn btn-success" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-plus fa-xs"></i> Add</button>
+        <button type="button" class="ml-5 mr-5 btn btn-success hideButtonEdit editModalbtn" data-toggle="modal" data-target="#editModal"><i class="fas fa-plus fa-xs"></i> Edit</button>
+        Select all items:
+        <input class="ml-2 followingAll" type="checkbox" aria-label="Checkbox for following text input" onchange="checkAllItems(event)">
+        <button type="button" class="ml-5 btn btn-danger main-btn-danger hideButtonDanger" onclick="removeAllCheckItems()"><i class="fas fa-minus-circle"></i> Delete selected items</button>
+        <button class="btn btn-info ml-3 hideButton " onclick="window.location.reload()"><i class="fas fa-redo fa-xs"></i> Refresh</button>
+    </div>
+    <!-- ? header buttons end-->
+
+        <hr>
+
+    <!-- ? userCards row start -->
+        <div class="container">
+            <h4 class="ml-3">all vehicle <i class="fas fa-car fa-fs"></i> <small class="mark vehicleSizeControl"></small></h4>
+            <div class="d-flex flex-row  flex-wrap col-30 carCards"></div>
+        </div>
+    <!-- ? userCards row end -->
+
+    <hr>
+
+    <!--? Add Modal start -->
+    
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-car fa-xs"></i> Add vehicle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h3 class="mt-4 ml-3"><i class="fas fa-cog fa-xs"></i> vehicle property</h3>
+    
+                        <form>
+    
+                            <div class="col">
+                                <input type="text" class="form-control mt-5 vehicleName" placeholder="Vehicle Name">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" class="form-control mt-4 vehicleModel" placeholder="Vehicle model">
+                            </div>
+    
+                            <div class="col-5">
+                                <input type="text" class="form-control mt-4 mb-4 vehicleAge" placeholder="Year">
+                            </div>
+    
+                            <div class="wrapper mb-3 mt-1">
+                                <div class="form-check form-check-inline ml-3">
+                                    <input class="form-check-input add-check-input" type="checkbox" value="Petrol">
+                                    <label class="form-check-label" for="inlineCheckbox1">Petrol</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input add-check-input" type="checkbox" value="Disel">
+                                    <label class="form-check-label" for="inlineCheckbox2">Disel</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input add-check-input" type="checkbox" value="Hybrid">
+                                    <label class="form-check-label" for="inlineCheckbox3">Hybrid</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input add-check-input" type="checkbox" value="Electro">
+                                    <label class="form-check-label" for="inlineCheckbox4">Electro</label>
+                                </div>
+                            </div>
+    
+                        </form>
+    
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                    <button type="button" class="btn btn-success mt-3 mb-3 create-btn" onclick="addVehicle()"><i class="fas fa-plus-circle fa-sl"></i> Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ? Add Modal end -->
+
+    <!-- ? Edit Modal start -->
+
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fas fa-car fa-xs"></i> Add vehicle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <h3 class="mt-4 ml-3"><i class="fas fa-cog fa-xs"></i> vehicle property</h3>
+    
+                        <form>
+    
+                            <div class="col">
+                                <input type="text" class="form-control mt-5 vehicleName vehNameClassInput" placeholder="Vehicle Name">
+                            </div>
+
+                            <div class="col">
+                                <input type="text" class="form-control mt-4 vehicleModel vehModelClassInput" placeholder="Vehicle model">
+                            </div>
+    
+                            <div class="col-5">
+                                <input type="text" class="form-control mt-4 mb-4 vehicleAge vehYearClassInput" placeholder="Year">
+                            </div>
+    
+                            <div class="wrapper mb-3 mt-1">
+                                <div class="form-check form-check-inline ml-3">
+                                    <input class="form-check-input edit-check-input" type="checkbox" value="Petrol">
+                                    <label class="form-check-label" for="inlineCheckbox1">Petrol</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input edit-check-input" type="checkbox" value="Disel">
+                                    <label class="form-check-label" for="inlineCheckbox2">Disel</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input edit-check-input" type="checkbox" value="Hybrid">
+                                    <label class="form-check-label" for="inlineCheckbox3">Hybrid</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input edit-check-input" type="checkbox" value="Electro">
+                                    <label class="form-check-label" for="inlineCheckbox4">Electro</label>
+                                </div>
+                            </div>
+    
+                        </form>
+    
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal" style="display: none;">Close</button>
+                    <button type="button" class="btn btn-success mt-3 mb-3 update-btn" data-updated-id="" onclick="updateVehicle(this)"><i class="fas fa-plus-circle fa-sl"></i> Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ? Edit Modal end -->
+
+    
+    <!-- ? JS -->
+    <script src="storage.js"></script>
+    <script src="data.js"></script>
+    <!-- ? bootstrap CDN JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</body>
+</html>

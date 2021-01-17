@@ -1,0 +1,65 @@
+a {
+    text-decoration: none;
+}
+
+h3 {
+    font-size: 1.35em;
+    color: #5385c1;
+    font-weight: 300;
+    margin: 0 0 1em 0;
+}
+
+.wrapper-style-1 p {
+    color: #9a9a9a;
+    font-weight: 300;
+    margin: 0 0 2.5em 0;
+}
+.title h2 {
+    font-size: 2.75em;
+    margin: 0 0 .5em 0;
+    font-weight: 100;
+}
+.title-style-1 h2 {
+    color: rgba(255,255,255,1);
+}
+.wrapper-style-2 h3 {
+    color: rgba(255,255,255,1);
+    font-size: 1.35em;
+}
+.title p,
+.col-style-2 p {
+    color: rgba(255,255,255,0.7);
+    font-weight: 300;
+}
+.title-style-1 p {
+    color: rgba(255,255,255,0.7);
+}
+
+.title-style-2 h2 {
+    color: #5385c1;
+}
+.title-style-2 p {
+    color: #bbb;
+}
+
+.logo {
+    color: rgba(255,255,255,1);
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.row-cols a {
+    color: rgba(255,255,255,0.7);
+    font-size: .8em;
+}
+
+.banner-content h1 {
+    color: rgba(255,255,255,1);
+    font-size: 3.5em;
+    font-weight: 100;
+}
+.banner-content p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1em;
+    font-weight: 200;
+}
