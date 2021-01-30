@@ -132,6 +132,9 @@ img {
 .urban-img {
     background-image: url('urban-img.png');
 }
+.indostrious-img {
+    background-image: url('indostrious.png');
+}
 
 .background-color {
     position: absolute;
