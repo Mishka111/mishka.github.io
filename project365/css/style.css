@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
+image {
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+a,
+li {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1410px;
+  margin: 0 auto;
+}
