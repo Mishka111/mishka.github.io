@@ -26,7 +26,6 @@
   top: 0;
   width: 30rem;
   z-index: 10;
-  transition: 0.3s;
 }
 
 .menu__close--button {
