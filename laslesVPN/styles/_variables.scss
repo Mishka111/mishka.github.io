@@ -1,0 +1,74 @@
+$defaultFont: 'Rubik', sans-serif;
+
+$regularFontSize: 16px;
+$regularFontColor: #4F5665;
+
+$blackColor: #0B132A;
+
+$copyrightColor: #AFB5C0;
+
+// * mixin - list
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin  mainButton {
+  display: block;
+  width: 250px;
+
+  color: #fff;
+  background: rgba(245, 56, 56, 1);
+  padding: 17.5px 77.5px;
+  border-radius: 10px;
+
+  font-weight: 700;
+  font-size: $regularFontSize;
+  
+  box-shadow: 0px 15px 30px rgba(245, 56, 56, 0.2);
+}
+
+@mixin cardButton {
+  color: rgba(245, 56, 85, 1);
+  font-weight: 500;
+
+  border: 1px solid rgba(245, 56, 85, 1);
+  border-radius: 50px;
+  padding: 10px 42px;
+
+  transition: 0.18s;
+
+  &:hover {
+    color: #fff;
+    background: #F53838;
+  }
+}
+
+@mixin textCenter {
+  margin: 0 auto;
+  text-align: center;
+}
+
+@mixin contentHeader {
+  color: $blackColor;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 50px;
+}
+
+@mixin contentDescription {
+  color: $regularFontColor;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+}
+@mixin contentDescriptionSize {
+  width: 555px;
+}
+
+@mixin contentInner {
+  color: $regularFontColor;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+}

@@ -1,0 +1,88 @@
+@media (max-width: 1140px) {
+  .content-container {
+    width: 95%;
+  }
+  .subscribe {
+    position: relative;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1020px) {
+  .package-content .package-cards-list {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .package-content .package-cards-list .package-card {
+    margin-bottom: 30px;
+  }
+  .card-second {
+    display: none;
+  }
+}
+
+@media (max-width: 940px) {
+  .package-content .package-description,
+  .map p,
+  .customer .customer-about-description {
+    width: 100%;
+  }
+  .navigation .navigation-list {
+    display: none;
+  }
+  .about-content,
+  .features-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about-content .about {
+    order: 2;
+    margin-top: 40px;
+    margin-right: 0;
+  }
+  .features-content .features {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  .subscribe {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .subscribe-info {
+    text-align: center;
+  }
+  .subscribe-button {
+    margin-top: 30px;
+  }
+  .info-card {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
+  .info-card .col {
+    justify-content: center;
+  }
+  .col {
+  
+    flex: 1;
+  }
+  .stick-img {
+    display: none;
+  }
+  .footer .footer__row .footer__list .list__content {
+    width: 100%;
+  }
+  .footer__row {
+    flex-wrap: wrap;
+  }
+  .footer__form {
+    margin-top: 70px;
+    order: 1;
+  }
+}
+
+@media (max-width: 750px) {
+  .card-first {
+    display: none;
+  }
+}
