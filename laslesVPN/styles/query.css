@@ -23,8 +23,7 @@
 
 @media (max-width: 940px) {
   .package-content .package-description,
-  .map p,
-  .customer .customer-about-description {
+  .map p {
     width: 100%;
   }
   .navigation .navigation-list {
@@ -46,7 +45,7 @@
   }
   .subscribe {
     flex-wrap: wrap;
-    justify-content: center;
+    padding: 30px;
   }
   .subscribe .subscribe-info {
     width: 100%;
@@ -84,6 +83,9 @@
   }
   .customer .customer-card__row .customer-card {
     margin-right: 0;
+  }
+  .customer .customer-about-description {
+    width: 95%;
   }
 }
 
