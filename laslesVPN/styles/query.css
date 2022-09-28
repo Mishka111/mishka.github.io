@@ -48,8 +48,8 @@
     flex-wrap: wrap;
     justify-content: center;
   }
-  .subscribe-info {
-    text-align: center;
+  .subscribe .subscribe-info {
+    width: 100%;
   }
   .subscribe-button {
     margin-top: 30px;
@@ -78,6 +78,12 @@
   .footer__form {
     margin-top: 70px;
     order: 1;
+  }
+  .customer h3 {
+    width: 100%;
+  }
+  .customer .customer-card__row .customer-card {
+    margin-right: 0;
   }
 }
 
