@@ -11,6 +11,21 @@ body {
 img {
     width: 100%;
 }
+
+.main-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+}
+.nav-link--style {
+    font-weight: 500;
+}
+.active-link {
+    border-bottom: 1px solid rgb(222,231,239);
+}
+
 .profile-icon {
     font-weight: 0;
 }
@@ -28,9 +43,7 @@ img {
     color: rgb(222,231,239);
     transition: 0.3s;
 }
-.nav-logo {
-    font-size: 20px;
-}
+.nav-logo,
 .nav-btn {
     font-size: 18px;
 }
@@ -53,7 +66,7 @@ img {
 }
 .wrapper {
     padding: 8em 0;
-    min-height: calc(100vh - 190px);
+    /* min-height: calc(100vh - 190px); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,6 +159,18 @@ img {
 .indostrious-img {
     background-image: url('indostrious.png');
 }
+.project365-img {
+    background-image: url('beep365.png');
+}
+.evolution-img {
+    background-image: url('evolution-img.png');
+}
+.perfume-img {
+    background-image: url('perfume-img.png');
+}
+.laslesvpn-img {
+    background-image: url('laslesvpn-img.png');
+}
 
 .background-color {
     position: absolute;
@@ -190,7 +215,7 @@ img {
     transition: 0.5s;
 }
 .link-tags:hover {
-    color: rgba(38,34,97,0.5);
+    color: rgb(60,83,163);
 }
 .fa-align-left {
     margin-left: 5px;
