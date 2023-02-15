@@ -1,0 +1,414 @@
+.content {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.style-first {
+  padding: 160px 0 100px;
+
+  @include listInformation;
+  
+  .list-content {
+    @include headerSocialMediaFlex(flex-start, row);
+    flex-wrap: wrap;
+    gap: 24px 24px;
+
+    .col {
+      position: relative;
+
+      height: 240px;
+      border-radius: 8px;
+
+      .background-inner {
+        padding: 23px 24px;
+
+        h6 {
+          cursor: pointer;
+
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+          color: #fff;
+
+          margin-bottom: 10px;
+            }
+        p {
+          cursor: pointer;
+
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #fff;
+
+          margin-bottom: 100px;
+        }
+      }
+
+      & span {
+        @include linearButton;
+        visibility: hidden;
+
+        cursor: pointer;
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover .button {
+        visibility: visible;
+      }
+    }
+    .col-background-1 {
+      background-image: $background10;
+      @include contentStyleFirst;
+      flex-grow: 1;
+      width: 30%;
+    }
+    .col-background-2 {
+      background-image: $background11;
+      @include contentStyleFirst;
+      flex-grow: 1;
+      width: 30%;
+    }
+    .col-background-3 {
+      background-image: $background12;
+      @include contentStyleFirst;
+      flex-grow: 1;
+      width: 30%;
+    }
+    .col-background-4 {
+      background-image: $background13;
+      @include contentStyleFirst;
+      flex-grow: 1;
+      width: 30%;
+    }
+    .col-background-5 {
+      background-image: $background14;
+      @include contentStyleFirst;
+      background-position: 50% 30%;
+      flex-grow: 3;
+      width: 60%;
+
+      // .button {
+      //   @include linearButton;
+      //   position: absolute;
+      //   top: 50%;
+      //   left: 50%;
+      //   transform: translate(-50%, -50%);
+      // }
+    }
+  }
+}
+
+.wrapper {
+  background-color: rgba(237, 239, 246, 1);
+
+  .style-second {
+    padding: 100px 0 100px;
+  
+    @include listInformation;
+
+    .card-row {
+      @include headerSocialMediaFlex(center, row);
+      margin-top: 25px;
+      .card {
+        padding: 22px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        h4 {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        p, a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        a {
+          color: #4A60A1;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        img, h4, p {
+          margin-bottom: 24px;
+        }
+
+        &:hover {
+          background-color: #fff;
+          box-shadow: 0px 24px 68px 0px rgba(59, 77, 129, 0.08);
+        }
+      }
+    }
+  }
+}
+
+.style-third {
+  padding: 100px 0 100px;
+
+  @include listInformation;
+
+  .row {
+    @include headerSocialMediaFlex(space-between, row);
+    flex-wrap: wrap;
+    gap: 27px 24px;
+    
+    .card {
+      width: 32%;
+      box-shadow: 0px 25.696969985961914px 72.80807495117188px 0px rgba(59, 77, 129, 0.08);
+      border-radius: 6px;
+
+      .card-background {
+
+        img {
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+
+      .card-tag {
+        position: relative;
+
+        .tag-list {
+          position: absolute;
+          top: 20px;
+          left: 10px;
+
+          a {
+            @include blueButton;
+            
+            padding: 4px 13px;
+            font-weight: 400;
+            font-size: 14.9515px;
+            line-height: 23px;
+
+            margin-right: 4px;
+
+            transition: $textTransitionTime;
+
+            &:hover {
+              opacity: 0.95;
+            }
+          }
+        }
+      }
+
+      .card-content {
+        padding: 25px 24px;
+        
+        .card-info {
+          position: relative;
+          margin-bottom: 16px;
+        
+          h6 {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 21.4141px;
+            line-height: 30px;
+
+            margin-bottom: 16px;
+            cursor: pointer;
+          }
+          p {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: #4A60A1;
+
+            margin-bottom: 16px;
+          }
+
+          .list {
+            @include headerSocialMediaFlex(start, row);
+            
+            @include listCol;
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 0.5px;
+              width: 100%;
+              background-color: rgba(231, 233, 235, 1);
+            }
+          }
+        }
+
+        .card-user {
+          @include headerSocialMediaFlex(space-between, row);
+
+          @include cardUser;
+        }
+      }
+    }
+  }
+
+  .button {
+    margin-top: 44px;
+    text-align: center;
+    
+    a {
+      @include blueButton;
+      transition: $textTransitionTime;
+
+      &:hover {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+}
+
+.style-fourth {
+  padding: 30px 0 100px;
+
+  @include listInformation;
+
+  .card-list {
+    @include headerSocialMediaFlex(space-between, row);
+
+    margin-top: 5px;
+
+    .card {
+      position: relative;  
+
+      width: 312px;
+      height: 425px;
+      border-radius: 6px;
+      background-repeat: no-repeat !important;
+
+      transition: $textTransitionTime;
+      
+      .card-inner {
+        @include headerSocialMediaFlex(flex-end, column);
+        align-content: space-between;
+        height: 100%;
+
+        .links {
+          @include headerSocialMediaFlex(space-around, row);
+          width: 100%;
+
+          a {
+            @include headerSocialMediaFlex(space-between, row);
+
+            color: #fff;
+            margin-bottom: 20px;
+
+            img {
+              margin-right: 6px;
+            }
+          }
+        }
+      }
+
+      & .button {
+        @include linearButton;
+
+        visibility: hidden;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+
+      }
+
+      &:hover .button {
+        visibility: visible;
+      }
+    }
+
+    .tag {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+
+      @include blueButton;
+
+        padding: 4px 13px;
+        font-weight: 400;
+        font-size: 14.9515px;
+        line-height: 23px;
+
+        transition: $textTransitionTime;
+
+        &:hover {
+          opacity: 0.95;
+        }
+    }
+
+    .card-background-1 {
+      background: $background24;
+    }
+    .card-background-2 {
+      background: $background25;
+    }
+    .card-background-3 {
+      background: $background26;
+    }
+    .card-background-4 {
+      background: $background27;
+    }
+  }
+
+  .pagitation {
+    text-align: center;
+    
+    a {
+      @include blueButton;
+
+      display: inline-block;
+      padding: 10px 0;
+      width: 45px;
+
+      margin: 32px 10px 0;
+
+      &:first-child {
+        background-color: rgba(183, 191, 217, 1);
+      }
+    }
+  }
+}
+
+.contact {
+  background: $background29;
+
+  margin-bottom: 100px;
+  
+    @include headerSocialMediaFlex(center, column);
+    
+    height: 508px;
+    
+    @include listInformation;
+
+    .list-info {
+      margin-bottom: 0;
+
+      h2, p {
+        color: #fff !important;
+      }
+  
+      p {
+        margin-bottom: 32px;
+      }
+  
+      a {
+        @include linearButton;
+    }
+  }
+}

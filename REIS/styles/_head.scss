@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $textFont;
+  font-weight: 400px;
+}
+a {
+  text-decoration: none;
+}
+
+// * main page
+
+.header-style-main {
+  @include headerBackground;
+}
+
+.header-container {
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+.header-top {
+  position: relative;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 0.5px;
+    width: 100%;
+    background-color: rgba(219, 223, 236, 1);
+  }
+}
+
+.header-contact {
+  padding: 31px 0;
+
+  .header--row,
+  .social-media--row {
+    @include headerSocialMediaFlex(space-between, row);
+  }
+
+  .header-email--col {
+    img {
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+    p, p span {
+      display: inline;
+      color: $headerColor;
+
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 400;
+    }
+    p span {
+      font-weight: 700;
+    }
+  }
+
+  .social-media--col {
+    a {
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 32px;
+    }
+    }
+  }
+
+  .phone--col {
+    position: relative;
+    padding-left: 24px;
+
+    color: $headerColor;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    img {
+      vertical-align: middle;
+      margin-right: 12px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -8px;
+
+      height: 40px;
+      width: 0.5px;
+      background-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+nav {
+  padding-top: 25px;
+
+  .header--row {
+    @include headerSocialMediaFlex(space-between, row);
+  }
+  
+  .logo--col {  
+    a {
+      display: flex;
+    }
+    h3 {
+      color: $logoColor;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 24px;
+      letter-spacing: 0.002em;
+    }
+    img {
+      margin-right: 8px;
+    }
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+.nav--col {
+  .nav-link {
+    color: $headerColor;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    margin-left: 48px;
+
+    transition: $textTransitionTime;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover {
+      color: $textHover;
+    }
+  }
+
+  .nav-button {
+    @include linearButton;
+
+    margin-left: 24px;
+  }
+}
+
+.active {
+  font-weight: 600 !important;
+
+  &:hover {
+    color: rgba(255, 255, 255, 1) !important;
+  }
+}
+
+.header-content {
+  margin-top: 158px;
+  text-align: center;
+
+  h1 {
+    @include h1;
+
+    margin-bottom: 24px;
+  }
+  p {
+    @include bodyLargeFont(#EDEFF6);
+
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+
+.nav-filter-box {
+  width: 1120px;
+  margin: 150px auto 10px;
+  text-align: center;
+
+  .nav-filter-button {
+    @include whiteButton;
+
+    display: inline-block;
+  }
+  .active {
+    @include blueButton;
+
+    margin-right: 10px;
+  }
+}
+
+.nav-filter {
+  width: 1100px;
+  margin: 0 auto;
+
+  background-color: $headerColor;
+  box-shadow: 10px 20px 60px rgb(0 0 0 / 5%);
+  border-radius: 8px;
+
+  .nav-filter-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .col, .button {
+    padding: 30px 60px;
+  }
+  .col {
+    position: relative;
+
+    img {
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 0;
+      height: 64px;
+      width: 0.5px;
+      background-color: rgba(207, 211, 214, 1);
+    }
+
+    .headline {
+      display: block;
+      margin-bottom: 16px;
+
+      color: #2C3A61;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .select {
+      @include defaultText(#889099);
+    }
+
+  }
+
+  .button {
+    a {
+      @include blueButton;
+
+      transition: $textTransitionTime;
+
+      &:hover {
+        color: $textHover;
+      }
+    }
+  }
+}
+
+// * other page
+
+.header-style-default {
+
+  .header-top {
+    background-color: rgba(44, 58, 97, 1);
+  }
+
+  nav {
+    margin-bottom: 26px;
+
+    background-color: rgba(255, 255, 255, 1);
+
+    .logo--col h3 {
+      color: rgba(74, 96, 161, 1);
+    }
+
+    .nav--col a {
+      color: rgba(15, 19, 32, 1);
+
+      &:hover {
+        color: rgba(15, 19, 32, 0.8);
+      }
+    }
+    .active {
+
+      &:hover {
+        color: rgba(15, 19, 32, 1) !important;
+      }
+    }
+  }
+}

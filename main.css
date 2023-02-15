@@ -22,9 +22,6 @@ img {
 .nav-link--style {
     font-weight: 500;
 }
-.active-link {
-    border-bottom: 1px solid rgb(222,231,239);
-}
 
 .profile-icon {
     font-weight: 0;
@@ -171,6 +168,9 @@ img {
 .laslesvpn-img {
     background-image: url('laslesvpn-img.png');
 }
+.reis-img {
+    background-image: url('reis.png');
+}
 
 .background-color {
     position: absolute;
@@ -210,12 +210,12 @@ img {
 }
 .link-tags {
     margin: 0 0.3em;
-    color: rgb(222,231,239);
+    color: rgba(222,231,239,1);
     cursor: pointer;
     transition: 0.5s;
 }
 .link-tags:hover {
-    color: rgb(60,83,163);
+    color: rgba(222,231,239,0.8);
 }
 .fa-align-left {
     margin-left: 5px;
