@@ -1,0 +1,127 @@
+footer {
+  margin-bottom: 50px !important;
+
+  .row {
+    @include headerSocialMediaFlex(space-between, row);
+    align-items: start;
+
+    .inner {
+      width: 30%;
+
+      .headline {
+        @include h4;
+        
+        display: block;
+
+        margin-top: 16px;
+        margin-bottom: 16px;
+      }
+      p {
+        @include footerParagraph;
+      }
+      .phone {
+        margin-bottom: 8px;
+      }
+      .description, .email {
+        width: 80%;
+        margin-bottom: 16px;
+      }
+      .email {
+        font-family: 'Public Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(54, 58, 61, 1);
+      }
+
+      .social-media {
+        a {
+          margin-right: 15px;
+
+          img {
+            width: 48px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+
+    .list {
+      @include headerSocialMediaFlex(space-between, row);
+      align-items: start;
+      width: 61.5%;
+
+      .column {
+
+        a {
+          display: block;
+        }
+        .headline {
+          @include h4;
+
+          margin-bottom: 32px;
+        }
+        .link {
+          @include footerParagraph;
+
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+// * media queries
+
+@media only screen and (max-width: 1211px) {
+  footer {
+    width: 95%;
+
+    .social-media {
+      a {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 907px) {
+  footer {
+    .row {
+      flex-wrap: wrap;
+
+      .inner, .list {
+        width: 82%;
+        margin: 0 auto;
+      }
+      .inner {
+        order: 1;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 538px) {
+  footer {
+    .list {
+      flex-wrap: wrap;
+
+      .column {
+        width: 50%;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+    .inner {
+      margin-top: 30px !important;
+
+      text-align: center;
+
+      .description, .email {
+        width: 100% !important;
+      }
+    }
+  }
+}
