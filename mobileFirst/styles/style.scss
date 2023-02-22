@@ -1,0 +1,247 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+}
+
+body {
+  min-width: 375px;
+  overflow-x: hidden;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 343px;
+  margin: 0 auto;
+}
+
+nav {
+  margin: 16px 0 38px;
+
+  .row {
+    @include flex(row, space-between);
+
+    .logo {
+      @include logo(#13183F);
+    }
+
+    .btn {
+      @include buttonStyleFirst($btn-idle-1);
+      transition: $transition;
+
+      &:hover {
+        background: #666CA3;
+      }
+    }
+  }
+}
+
+.content {
+  margin-bottom: 70px;
+  .row {
+    @include flex(column, space-between);
+    
+    .col {
+      margin-bottom: 70px;
+      p {
+        @include paragraph(16px, 500, 26px);
+        margin: 26px 0 24px;
+      }
+
+      .btn {
+        @include buttonStyleSecond();
+        transition: $transition;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .col--style {
+      position: relative;
+
+      .col__inner {
+        position: relative;
+        background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+        border-radius: 100%;
+        overflow: hidden;
+        width: 253px;
+        height: 253px;
+  
+        img {
+          position: absolute;
+          left: 25px;
+          bottom: -90px;
+        }
+      }
+
+      .card {
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0px 34px 54px rgba(6, 22, 141, 0.158854);
+        border-radius: 10px;
+        z-index: 10;
+
+        h2 {
+          font-weight: 800;
+          font-size: 32px;
+          line-height: 40px;
+          color: $btn-idle-1;
+        }
+        p {
+          @include paragraph(14px, 700, 28px);
+        }
+      }
+      .card--left {
+        padding: $img-card-padding-1;
+        left: -50px;
+        bottom: -20px;
+      }
+      .card--right {
+        padding: $img-card-padding-2;
+        right: -50px;
+        top: 0;
+      }
+    }
+  }
+}
+
+.card-list {
+  padding-bottom: 80px;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
+  .row {
+    @include flex(column, space-between);
+    row-gap: 40px;
+
+    .card--active {
+      @include activeCard();
+
+      h3 {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 32px;
+        color: #fff;
+      }
+    }
+
+    .card {
+      @include card();
+      position: relative;
+
+      img {
+        position: absolute;
+        top: -24px;
+        left: 28px;
+      }
+      h4 {
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 25px;
+        color: $btn-idle-1;
+      }
+      p {
+        @include paragraph(16px, 500, 26px);
+        margin: 16px 0 24px;
+      }
+      a {
+        @include link();
+      }
+    }
+  }
+}
+
+footer {
+  background: $btn-idle-1;
+  padding: 36px 16px;
+  .row {
+    @include flex(row, space-between);
+
+    .logo {
+      @include logo(#fff);
+    }
+    .btn {
+      @include buttonStyleFirst($btn-idle-3);
+      transition: all easy-in 300ms;
+
+      &:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    min-width: 768px;
+  }
+  
+  .container {
+    max-width: 689px;
+  }
+
+  .content {
+    margin-bottom: 136px;
+    .row {
+      @include flex(row, flex-start);
+      align-items: flex-start;
+
+      .col {
+        max-width: 398px;
+        margin-right: 30px;
+      }
+
+      .col--style {
+        .col__inner {
+          border-radius: 158.5px;
+          width: 216px;
+          height: 382px;
+
+          img {
+            bottom: 0;
+            left: 0;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 216.54px;
+          height: 688.56px;
+          background: linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+          border-radius: 158.5px;
+          transform: rotate(45deg);
+          top: -240px;
+          left: 170px;
+        }
+      }
+    }
+  }
+
+  .card-list {
+    .row {
+      @include flex(row, space-between);
+      flex-wrap: wrap;
+
+      .card, .card--active {
+        width: 338px;
+        height: 259px;
+      }
+      .card {
+        padding: 56px 22px 32px 32px;
+      }
+      .card--active {
+        padding: 56px 21px 139px 32px;
+      }   
+    }
+  }
+}

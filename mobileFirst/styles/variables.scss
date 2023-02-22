@@ -1,0 +1,93 @@
+@mixin flex($direction, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+}
+
+@mixin logo($color) {
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 35px;
+  color: $color;
+}
+
+$btn-idle-1 : #13183F;
+$btn-idle-2 : linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+$btn-idle-3 : linear-gradient(180deg, #4851FF 0%, #F02AA6 100%);
+
+$transition : 0.25s;
+
+h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 50px;
+  color: $btn-idle-1;
+}
+
+@mixin paragraph($size, $weight, $height) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+  color: #83869A;
+}
+
+@mixin buttonStyleFirst($background) {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 9px 24px 11px;
+  color: #fff;
+  background: $background;
+  border-radius: 28px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+@mixin buttonStyleSecond() {
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px 37px 15px 38px;
+  color: #fff;
+  background: $btn-idle-2;
+  border-radius: 31.5px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+@mixin link() {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #F74780;
+  transition: $transition;
+
+  &:hover {
+    color: #FFA7C3;
+  }
+}
+
+$img-card-padding-1 : 16px 45px 16px 20px;
+$img-card-padding-2 : 16px 20px 16px 20px;
+
+@mixin card() {
+  width: 343px;
+  height: 259px;
+  padding: 56px 29px 32px 28px;
+  background: #FFFFFF;
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
+}
+
+@mixin activeCard() {
+  width: 343px;
+  height: 120px;
+  padding: 24px 29px 32px 28px;
+  background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+  border-radius: 10px;
+}
