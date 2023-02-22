@@ -78,6 +78,12 @@ img {
 .main-btn {
     margin-top: 3.5em;
 }
+.main-btn .button {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
 .button {
     background-color: rgb(60,83,163);
     color: rgb(222,231,239);
@@ -170,6 +176,9 @@ img {
 }
 .reis-img {
     background-image: url('reis.png');
+}
+.skilled-img {
+    background-image: url('skilled.png');
 }
 
 .background-color {
