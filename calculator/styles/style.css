@@ -34,11 +34,17 @@ input:focus-visible {
   outline-color: rgb(38, 194, 174);
 }
 
+.logo {
+  width: 86.66px;
+  margin: 50px auto 40.86px;
+  pointer-events: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
-  align-items: end;
-  height: 100vh;
+  align-items: center;
+  flex-direction: column;
 }
 
 .calculator-card {
@@ -148,8 +154,17 @@ input:focus-visible {
 }
 
 @media only screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .container {
     align-items: center;
+  }
+  .logo {
+    margin: 0 0 87.86px 0;
   }
   .calculator-card {
     display: flex;
