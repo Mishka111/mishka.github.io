@@ -434,7 +434,7 @@ nav .logo--col span {
   }
   .hamburger--col #menu {
     position: fixed !important;
-    height: 100vh;
+    height: 100% !important;
     width: 100% !important;
     border-radius: 0 !important;
     padding: 7rem 14rem;
@@ -472,6 +472,9 @@ nav .logo--col span {
   .header-style-main h1 {
     font-size: 36px;
     text-align: center;
+  }
+  .header-style-main p {
+    font-size: 18px;
   }
 }
 .content {

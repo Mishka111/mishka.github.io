@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+  font-style: normal;
+}
+
+body {
+  background: rgba(197, 228, 231, 1);
+}
+
+@mixin button($color, $background) {
+  width: 146.63px;
+  font-size: 24px;
+  line-height: 36px;
+  padding: 6px 17.55px;
+  border-radius: 5px;
+  border: 0;
+  color: $color;
+  background: $background;
+  transition: 0.26s;
+}
+
+@mixin flex() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  margin-bottom: 6px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+input {
+  width: 311px;
+  height: 48px;
+  padding: 6px 17px 6px 45px;
+  text-align: end;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  border: 0;
+  border-radius: 5px;
+  color: rgba(0, 71, 75, 1);
+  background: rgba(243, 249, 250, 1);
+
+  &:focus-visible {
+    outline-color: rgba(38, 194, 174, 1);
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+}
+
+.calculator-card {
+  max-width: 375px;
+  height: 789px;
+  padding: 32px 24px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+  border-radius: 25px 25px 0px 0px
+}
+
+  .col__calculator {
+    h3 {
+      color: rgba(94, 122, 125, 1)
+    }
+
+    .input-box {
+      position: relative;
+      margin-bottom: 32px;
+  
+      img {
+        position: absolute;
+        top: 16.87px;
+        left: 19.26px;
+        pointer-events: none;
+      }
+    }
+  
+    .percents {
+      @include flex();
+      margin: 16px 0;
+
+      button {
+        @include button(rgba(255, 255, 255, 1), rgba(0, 71, 75, 1));
+        display: block;
+        margin-bottom: 16px;
+        cursor: pointer;
+
+        &:focus {
+          color: rgb(0, 71, 75);
+          background: rgb(38, 194, 174);
+        }
+      }
+      .custom {
+        @include button(rgba(84, 120, 120, 1), rgba(243, 249, 250, 1));
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .col__calculator-result {
+    background: rgba(0, 71, 75, 1);
+    padding: 37px 22px 24px 24px;
+    border-radius: 15px;
+
+    h3 {
+      color: rgba(255, 255, 255, 1)
+    }
+
+    .calculator-results {
+      margin-bottom: 32px;
+
+      .col {
+        @include flex();
+
+        .result__name {
+          p {
+            font-size: 13px;
+            line-height: 19px;
+            color: #7F9D9F;
+          }
+        }
+        .result__number {
+          p {
+            font-size: 32px;
+            line-height: 47px;
+            letter-spacing: -0.666667px;
+            color: #26C2AE;
+          }
+        }
+      }
+      & .col:first-child {
+        margin-bottom: 23px;
+      }
+    }
+    button {
+      @include button(rgba(0, 71, 75, 1), rgba(38, 194, 174, 1));
+      width: 100%;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+  }
+
+
+@media only screen and (min-width: 1440px) {
+  .container{
+    align-items: center;
+  }
+  .calculator-card {
+    display: flex;
+    max-width: 920px;
+    padding: 32px 32px 32px 48px;
+    height: 481px;
+    border-radius: 25px;
+  }
+  
+  .col__calculator {
+    width: 379px;
+    margin-right: 48px;
+
+    .input-box {
+      margin-bottom: 40px;
+
+      input {
+        width: 379px;
+      }
+    }
+
+    .percents {
+      margin-bottom: 24px;
+      button, .active, .custom {
+        width: 117px;
+        padding: 6px 14px;
+      }
+    }
+  }
+
+  .col__calculator-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 413px;
+    padding: 40px;
+
+    .calculator-results {
+      .col {
+        .result__number {
+          p {
+            font-size: 48px;
+            line-height: 71px;
+          }
+        }
+      }
+  
+      & .col:first-child {
+        margin-bottom: 37px;
+      }
+    }
+    }
+}

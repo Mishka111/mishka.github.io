@@ -180,6 +180,9 @@ img {
 .skilled-img {
     background-image: url('skilled.png');
 }
+.calculator-img {
+    background-image: url('calculator-img.png');
+}
 
 .background-color {
     position: absolute;
