@@ -183,6 +183,9 @@ img {
 .calculator-img {
     background-image: url('calculator-img.png');
 }
+.simple-calculator-img {
+    background-image: url('simple-calculator.png');
+}
 
 .background-color {
     position: absolute;
