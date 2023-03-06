@@ -92,8 +92,11 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+  .container {
+    max-width: 375px;
+  }
   .calculator {
-    width: 375px;
+    max-width: 375px;
   }
   .forms input {
     width: 75px;
