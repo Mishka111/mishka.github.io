@@ -95,12 +95,12 @@ input {
   
     .percents {
       @include flex();
-      margin: 16px 0;
+      margin: 16px 0 32px;
+      gap: 16px 14px;
 
       button {
         @include button(rgba(255, 255, 255, 1), rgba(0, 71, 75, 1));
         display: block;
-        margin-bottom: 16px;
         cursor: pointer;
 
         &:focus {
@@ -110,7 +110,6 @@ input {
       }
       .custom {
         @include button(rgba(84, 120, 120, 1), rgba(243, 249, 250, 1));
-        margin-bottom: 16px;
       }
     }
   }
@@ -193,11 +192,15 @@ input {
     }
 
     .percents {
-      margin-bottom: 24px;
+      margin-bottom: 40px;
       button, .active, .custom {
         width: 117px;
         padding: 6px 14px;
       }
+    }
+
+    & .input-box:last-child {
+      margin-bottom: 0;
     }
   }
 

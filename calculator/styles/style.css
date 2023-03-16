@@ -74,7 +74,8 @@ input:focus-visible {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin: 16px 0;
+  margin: 16px 0 32px;
+  gap: 16px 14px;
 }
 .col__calculator .percents button {
   width: 146.63px;
@@ -87,7 +88,6 @@ input:focus-visible {
   background: rgb(0, 71, 75);
   transition: 0.26s;
   display: block;
-  margin-bottom: 16px;
   cursor: pointer;
 }
 .col__calculator .percents button:focus {
@@ -104,7 +104,6 @@ input:focus-visible {
   color: rgb(84, 120, 120);
   background: rgb(243, 249, 250);
   transition: 0.26s;
-  margin-bottom: 16px;
 }
 
 .col__calculator-result {
@@ -184,11 +183,14 @@ input:focus-visible {
     width: 379px;
   }
   .col__calculator .percents {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
   }
   .col__calculator .percents button, .col__calculator .percents .active, .col__calculator .percents .custom {
     width: 117px;
     padding: 6px 14px;
+  }
+  .col__calculator .input-box:last-child {
+    margin-bottom: 0;
   }
   .col__calculator-result {
     display: flex;
