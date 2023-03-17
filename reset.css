@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+i {
+  font-size: 26px;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgb(35, 37, 38);
+  background: -webkit-linear-gradient(to right, rgb(65, 67, 69), rgb(35, 37, 38));
+  background: linear-gradient(to right, rgb(65, 67, 69), rgb(35, 37, 38));
+  overflow-x: hidden;
+}

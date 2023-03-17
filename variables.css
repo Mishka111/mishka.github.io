@@ -1,3 +1,21 @@
+::selection {
+  background: rgb(214, 36, 158);
+  color: rgb(35, 37, 38);
+}
+
+::-webkit-scrollbar {
+  width: 30px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(65, 67, 69);
+}
+::-webkit-scrollbar-thumb {
+  background: #4776E6;
+  background: -webkit-linear-gradient(to right, hsl(263, rgb(71, 118, 230)), #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+  border-radius: 3px;
+}
+
 .banner {
   background: url('./banner-images/not-found.png');
 }
