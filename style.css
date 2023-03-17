@@ -4,12 +4,33 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   transition: 0.3s ease;
 }
+.author-image {
+  position: relative;
+}
+.location {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #fff;
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+.location i {
+  font-size: 16px;
+  margin-right: 8px;
+}
+.location i,
+.location p {
+  color: rgb(65, 67, 69);
+}
 
 .content {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 40px 0;
+  z-index: 100;
 }
 
 .container {
@@ -17,7 +38,7 @@
 }
 
 .description {
-  margin: 30px 0 0;
+  margin: 40px 0 0;
 }
 .description .headline {
   margin-bottom: 15px;
@@ -34,10 +55,11 @@
 }
 .description p {
   font-size: 16px;
-  margin-bottom: 10px;
+  line-height: 22px;
+  margin-bottom: 16px;
 }
 .description a {
-  margin-top: 25px;
+  margin-top: 19px;
   display: block;
   cursor: pointer;
   font-weight: 700;
@@ -66,7 +88,27 @@ footer {
   justify-content: space-between;
   margin-top: 60px;
 }
+.copy-email {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.copy-email .mail i {
+  transition: 0.3s;
+}
+.copy-email .mail:hover i {
+  color: #d6249f;
+  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.copyAlert {
+  position: absolute;
+  right: -70px;
+  background: #4776E6;
+  background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  background: linear-gradient(to right, #8E54E9, #4776E6);
+}
 footer .mail {
+  cursor: pointer;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -197,12 +239,32 @@ footer .mail i {
   height: 100%;
 }
 
+.card:hover .banner-color {
+  opacity: 0.9;
+}
+.fa-eye {
+  display: none;
+  position: absolute;
+  color: #4776E6;
+  color: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  color: linear-gradient(to right, #8E54E9, #4776E6);
+  font-size: 86px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  transition: 0.3s;
+}
+.card:hover .fa-eye {
+  display: block;
+}
+
 .banner-color {
   position: absolute;
   width: 100%;
   height: 100%;
   background: rgb(65, 67, 69);
   opacity: 0.3;
+  transition: 0.3s;
 }
 
 /* * media queries */
@@ -214,6 +276,9 @@ footer .mail i {
   .author-image {
     max-width: 375px;
     margin: 0 auto;
+  }
+  .copyAlert {
+    right: -75px;
   }
   .filters {
     flex-direction: row;
@@ -248,7 +313,7 @@ footer .mail i {
 
   footer {
     max-width: 985px;
-    margin: 60px 0 0 auto;
+    margin: 30px 0 0 auto;
   }
 
   .projects {
@@ -265,5 +330,9 @@ footer .mail i {
   .footer-projects {
     max-width: 100%;
     margin-top: 80px;
+  }
+
+  .cycle{
+    display: block;
   }
 }

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mikheili Mebonia</title>
+  <title>Mishka</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -17,16 +17,27 @@
   <div class="content">
     <div class="container">
       <main>
-        <div class="author-image"><img src="./images/me.jpg" class="author"></div>
+        <div class="author-image">
+          <img src="./images/me.jpg" class="author">
+          <div class="location">
+            <p><i class="fa-sharp fa-solid fa-location-dot"></i>Tbilisi, Georgia</p>
+          </div>
+        </div>
         <div class="description">
           <h1 class="headline">about me</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo veniam accusantium accusamus a ut dolores sunt recusandae alias sapiente, tempore mollitia cumque voluptas eius incidunt eum aspernatur ducimus optio vero beatae porro commodi aliquam! Ducimus, odio quae eligendi praesentium, alias, veniam iste reprehenderit nesciunt aspernatur sit non reiciendis eius!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo veniam accusantium accusamus a ut dolores sunt recusandae alias sapiente, tempore mollitia cumque voluptas eius incidunt eum aspernatur ducimus optio vero beatae porro commodi aliquam! Ducimus, odio quae eligendi praesentium, alias, veniam iste reprehenderit nesciunt aspernatur sit non reiciendis eius!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo veniam accusantium accusamus a ut dolores sunt recusandae alias sapiente, tempore mollitia cumque voluptas eius incidunt eum aspernatur ducimus optio vero beatae porro commodi aliquam! Ducimus, odio quae eligendi praesentium, alias, veniam iste reprehenderit nesciunt aspernatur sit non reiciendis eius!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores explicabo veniam accusantium accusamus a ut dolores sunt recusandae alias sapiente, tempore mollitia cumque voluptas eius incidunt eum aspernatur ducimus optio vero beatae porro commodi aliquam! Ducimus, odio quae eligendi praesentium, alias, veniam iste reprehenderit nesciunt aspernatur sit non reiciendis eius!</p>
+          <p>Hey my name is Mikheili Mebonia, but you can call me Mishka. I am interested in Front End Engineering, I do not have any work experience in this field, however, I have created some projects which I want to share with you. I am going to improve myself to be a Full Stack Developer.</p>
+          <p>I know perfectly <span class="html">html </span>,<span class="css">css </span> and <span class="sass">sass</span>.</p>
+          <p>Currently, I am learning <span class="js">javascript</span>.</p>
+          <p>I speak Georgian fluently since it is my native language, I am good in English (B2) and I speak Russian as well.</p>
+          <p>I want to start working as an intern to improve my abilities and learn new things.</p>
           <a href="projects.html">Projects</a>
       </div>
       </main>
       <footer>
-        <div class="mail"><i class="fa-solid fa-envelope"></i>mishkas.mebonia@gmail.com</div>
+        <div class="copy-email">
+          <div class="mail" onclick="copy(this)"><i class="fa-solid fa-envelope"></i onclick="copyURL()">mishkas.mebonia@gmail.com</div>
+          <span class="copyAlert">Copied !</span>
+        </div>
         <div class="social-media">
           <a href="https://www.facebook.com/FUSSKRULL/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
           <a href="https://www.instagram.com/fusskrull/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
@@ -34,5 +45,9 @@
       </footer>
     </div>
   </div>
+  <div class="cycle cycle-decoration-1"></div>
+  <div class="cycle cycle-decoration-2"></div>
+  <div class="cycle cycle-decoration-3"></div>
+  <script src="script.js"></script>
 </body>
 </html>
