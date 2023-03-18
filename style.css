@@ -97,8 +97,9 @@ footer {
   transition: 0.3s;
 }
 .copy-email .mail:hover i {
-  color: #d6249f;
-  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  color: #4776E6;
+  color: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
+  color: linear-gradient(to right, #8E54E9, #4776E6);
 }
 .copyAlert {
   position: absolute;
@@ -123,14 +124,11 @@ footer .mail i {
 .social-media a:first-child i{
   margin-right: 8px;
 }
-.social-media a:hover .fa-facebook {
+.social-media a:hover .fa-github,
+.social-media a:hover .fa-linkedin {
   color: #4776E6;
   color: -webkit-linear-gradient(to right, #8E54E9, #4776E6);
   color: linear-gradient(to right, #8E54E9, #4776E6);
-}
-.social-media a:hover .fa-instagram {
-  color: #d6249f;
-  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
 }
 
 /* * projects page */
