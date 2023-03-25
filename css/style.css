@@ -287,7 +287,7 @@ footer .mail i {
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1024px) {
   body {
     min-height: 100vh;
     display: flex;
@@ -296,7 +296,7 @@ footer .mail i {
   }
 
   .container {
-    max-width: 1440px;
+    max-width: 1024px;
   }
 
   main {
@@ -307,15 +307,21 @@ footer .mail i {
 
   .description {
     margin: 0;
+    min-width: 600px;
+  }
+
+  .location {
+    min-width: 200px;
+    text-align: center;
   }
 
   footer {
-    max-width: 985px;
+    max-width: 600px;
     margin: 30px 0 0 auto;
   }
 
   .projects {
-    min-width: 1440px;
+    min-width: 1024px;
   }
   .card {
     height: 500px;
@@ -332,5 +338,23 @@ footer .mail i {
 
   .cycle{
     display: block;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .description {
+    min-width: auto;
+  }
+
+  footer {
+    max-width: 985px;
+  }
+
+  .projects {
+    min-width: 1440px;
   }
 }
