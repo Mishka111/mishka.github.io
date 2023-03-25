@@ -339,6 +339,29 @@ footer .mail i {
   .cycle{
     display: block;
   }
+
+  .cycle-decoration-1 {
+    left: -400px;
+    top: -300px;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.6);
+  }
+  .cycle-decoration-2 {
+    right: -600px;
+    top: -550px;
+    width: 800px;
+    height: 800px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  .cycle-decoration-3 {
+    right: 800px;
+    bottom: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 100% 100% 0 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -356,5 +379,18 @@ footer .mail i {
 
   .projects {
     min-width: 1440px;
+  }
+
+  .cycle-decoration-1 {
+    left: -300px;
+    top: -230px;
+  }
+  .cycle-decoration-2 {
+    right: -300px;
+  }
+  .cycle-decoration-3 {
+    right: 600px;
+    width: 200px;
+    height: 200px;
   }
 }

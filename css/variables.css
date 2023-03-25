@@ -22,7 +22,7 @@
   border-radius: 100%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
-.cycle-decoration-1 {
+/* .cycle-decoration-1 {
   left: -300px;
   top: -230px;
   width: 500px;
@@ -43,7 +43,7 @@
   height: 200px;
   border-radius: 100% 100% 0 0;
   background: rgba(255, 255, 255, 0.5);
-}
+} */
 
 ::selection {
   background: rgb(214, 36, 158);
