@@ -105,3 +105,24 @@
 .layouts-banner {
   background: url('../banner-images/layouts-img.png');
 }
+.shop-project-banner {
+  background: url('../banner-images/shop-project.png');
+}
+.shopping-cart-banner {
+  background: url('../banner-images/shopping-cart.png');
+}
+.timer-banner {
+  background: url('../banner-images/timer.png');
+}
+.todo-list-banner {
+  background: url('../banner-images/todo-list.png');
+}
+.user-data-banner {
+  background: url('../banner-images/user-data.png');
+}
+.wolt-shawarma-banner {
+  background: url('../banner-images/wolt-shawarma.png');
+}
+.rate-banner {
+  background: url('../banner-images/rate.png');
+}

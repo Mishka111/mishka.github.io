@@ -45,13 +45,18 @@
 }
 .headline {
   display: inline-block;
-  padding: 0 15px;
+  padding: 2px 9px;
   border-radius: 3px;
   font-size: 26px;
   text-transform: uppercase;
   background: #4776E6;
   background: -webkit-linear-gradient(to right, hsl(263, rgb(71, 118, 230)), #4776E6);
   background: linear-gradient(to right, #8E54E9, #4776E6);
+}
+.projects-quantity {
+  margin: 0 5px 0 0;
+  padding: 0;
+  border-radius: 0;
 }
 .description p {
   font-size: 16px;
@@ -279,6 +284,7 @@ footer .mail i {
     right: -75px;
   }
   .filters {
+    /* display: flex; */
     flex-direction: row;
     justify-content: space-between;
   }

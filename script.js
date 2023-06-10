@@ -14,3 +14,8 @@ function copy(that){
     copyDiv.style.animationName = "none"; 
     }, 2400);
 }
+
+const cards = document.querySelectorAll('.card')
+const projectsQuantity = document.querySelector('#projects-quantity')
+
+projectsQuantity.innerHTML = cards.length
