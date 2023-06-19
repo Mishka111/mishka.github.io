@@ -228,6 +228,11 @@ footer .mail i {
   top: 15px;
   left: 15px;
 }
+.headline-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .card .card-tags {
   z-index: 100;
   position: absolute;
@@ -368,6 +373,9 @@ footer .mail i {
     border-radius: 100% 100% 0 0;
     background: rgba(255, 255, 255, 0.5);
   }
+  .badge-progress {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -398,5 +406,8 @@ footer .mail i {
     right: 600px;
     width: 200px;
     height: 200px;
+  }
+  .badge-progress {
+    font-size: 16px;
   }
 }

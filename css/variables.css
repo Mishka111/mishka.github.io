@@ -22,6 +22,14 @@
   border-radius: 100%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
+.badge-progress {
+  margin: 0 0 0 5px;
+  padding: 3px 10px;
+  font-size: 10px;
+  background: #FFD95A;
+  border-radius: 8px;
+}
+
 /* .cycle-decoration-1 {
   left: -300px;
   top: -230px;
