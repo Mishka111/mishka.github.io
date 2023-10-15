@@ -1,3 +1,33 @@
+.description p span {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.html {
+  background: rgb(240, 101, 41);
+  color: rgb(255, 255, 255);
+}
+.css {
+  background: rgb(41, 101, 241);
+  color: rgb(255, 255, 255);
+}
+.sass {
+  background: rgb(191, 64, 128);
+  color: rgb(255, 255, 255);
+}
+.js {
+  background: rgb(240, 219, 79);
+  color:rgb(50, 51, 48);
+}
+.ts {
+  background: rgb(0, 122, 204);
+  color: rgb(255, 255, 255);
+}
+.react {
+  background: rgb(97, 219, 251);
+  color: rgb(31, 35, 42);
+}
+
 .copyAlert {
   opacity: 0;
 }
@@ -136,4 +166,7 @@
 }
 .archmove-banner {
   background: url('../banner-images/archmove.png');
+}
+.credit-card-banner {
+  background: url('../banner-images/credit-card.png');
 }

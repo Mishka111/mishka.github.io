@@ -176,7 +176,6 @@ footer .mail i {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 700;
-  color: #fff;
   font-size: 16px;
   border: 0;
   outline: 0;
@@ -186,20 +185,6 @@ footer .mail i {
 }
 .languages-btn:hover {
   opacity: 0.8;
-}
-
-.html {
-  background: rgb(240, 101, 41);
-}
-.css {
-  background: rgb(41, 101, 241);
-}
-.sass {
-  background: rgb(191, 64, 128);
-}
-.js {
-  background: rgb(240, 219, 79);
-  color:rgb(50, 51, 48);
 }
 
 .row {
